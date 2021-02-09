@@ -97,6 +97,11 @@
 .registration-form__personal-info-link {
   color: $blue;
   cursor: pointer;
+
+  &:focus,
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 .registration-form__submit {
