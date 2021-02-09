@@ -1,0 +1,57 @@
+.checkbox + .registration-form__personal-info-label::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 24px;
+  height: 24px;
+  margin-top: -1px;
+  margin-left: -43px;
+  border: 2px solid $grey;
+  background-color: $white;
+
+  @media (min-width: $tablet) {
+    margin-left: -33px;
+    border: 2px solid $blue;
+    background-color: $blue;
+  }
+
+  @media (min-width: $desktop) {
+    margin-left: -41px;
+  }
+}
+
+.checkbox + .registration-form__personal-info-label:hover::before,
+.checkbox:focus + .registration-form__personal-info-label::before {
+  border-color: $dark-grey;
+
+  @media (min-width: $tablet) {
+    border-color: $blue;
+  }
+}
+
+.checkbox + .registration-form__personal-info-label:active::before {
+  border-color: $dark-grey;
+
+  @media (min-width: $tablet) {
+    border-color: $blue;
+  }
+}
+
+.checkbox:checked + .registration-form__personal-info-label::before {
+  content: "";
+  position: absolute;
+  display: block;
+  background-image: url("../../img/check.svg");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position-x: center;
+  background-position-y: center;
+
+  &:hover::before {
+    border-color: $dark-grey;
+  }
+
+  @media (min-width: $tablet) {
+    background-image: url("../../img/check-white.svg");
+  }
+}

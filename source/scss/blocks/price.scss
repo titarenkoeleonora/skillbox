@@ -1,0 +1,279 @@
+.price {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $tablet) {
+    align-items: center;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: 585px 585px;
+    align-items: stretch;
+    justify-content: center;
+  }
+}
+
+.price__title {
+  @include reset-text;
+  padding-top: 57px;
+  margin-bottom: 83px;
+  align-self: center;
+  width: 275px;
+  text-align: center;
+  font-family: "Roboto-Bold";
+  font-size: 38px;
+
+  @media (min-width: $tablet) {
+    padding-top: 50px;
+    margin-bottom: 77px;
+    width: 100%;
+    font-size: 45px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 65px;
+    margin-bottom: 57px;
+    grid-column: 1/3;
+    font-size: 55px;
+  }
+}
+
+.price__wrapper {
+  position: relative;
+  padding-top: 89px;
+  padding-bottom: 42px;
+  color: $white;
+  background-color: $blue;
+
+  @media (min-width: $tablet) {
+    padding-top: 133px;
+    padding-bottom: 75px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 245px;
+  }
+}
+
+.price__options {
+  @include reset-list;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.price__options-item {
+  margin-bottom: 27px;
+  text-align: center;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &--full {
+    opacity: 0.4;
+  }
+
+  &--installment {
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: $tablet) {
+    margin-bottom: 53px;
+
+    &--installment {
+      margin-bottom: 39px;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 37px;
+  }
+}
+
+.price__options-text {
+  @include reset-text;
+
+  &--full {
+    margin-bottom: 8px;
+    font-size: 15px;
+  }
+
+  &--first-students {
+    font-size: 15px;
+  }
+
+  &--installment {
+    font-size: 18px;
+    letter-spacing: -0.5px;
+  }
+
+  @media (min-width: $tablet) {
+    &--full {
+      margin-bottom: 10px;
+    }
+
+    &--installment {
+      font-size: 20px;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    &--first-students {
+      font-size: 20px;
+    }
+
+    &--installment {
+      font-size: 23px;
+    }
+  }
+}
+
+.price__full-price {
+  font-family: "Roboto-Light";
+  font-size: 36px;
+  text-decoration: line-through;
+}
+
+.price__installment-price {
+  display: block;
+  margin-bottom: 2px;
+  font-size: 56px;
+  line-height: 56px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 11px;
+    font-size: 80px;
+  }
+}
+
+.price__first-students-price {
+  font-family: "Roboto-Light";
+  font-size: 40px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 3px;
+    display: block;
+    font-size: 50px;
+  }
+}
+
+.price__form-wrapper {
+  padding-top: 40px;
+  color: $dark-grey;
+  background-color: $light-grey;
+
+  @media (min-width: $tablet) {
+    padding-top: 70px;
+    margin-bottom: 80px;
+    width: 710px;
+    box-shadow: 0px 2px 24px rgba(168, 175, 196, 0.3);
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 55px;
+    margin-bottom: 0;
+    width: 100%;
+  }
+}
+
+.price__form-title {
+  @include reset-text;
+  margin-bottom: 32px;
+  width: 205px;
+  color: $black;
+  font-family: "Roboto-Bold";
+  font-size: 30px;
+  text-align: left;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 40px;
+    width: 100%;
+    font-size: 38px;
+    text-align: center;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 26px;
+    text-align: left;
+  }
+}
+
+.price__advantages {
+  @include reset-list;
+  padding-left: 24px;
+  margin-bottom: 33px;
+  font-size: 15px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 57px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 50px;
+  }
+}
+
+.price__advantages-item {
+  position: relative;
+  margin-bottom: 22px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: -24px;
+    width: 6px;
+    height: 6px;
+    background-color: #3d3bff;
+    border-radius: 50%;
+  }
+}
+
+.price__description {
+  margin-bottom: 33px;
+
+  @media (min-width: $tablet) {
+    padding-left: 62px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 415px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 0;
+
+    justify-content: start;
+    width: 100%;
+  }
+}
+
+.price__description-info {
+  @include reset-text;
+
+  &--start {
+    margin-bottom: 12px;
+  }
+
+  @media (min-width: $tablet) {
+    font-size: 15px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-right: 40px;
+  }
+}
+
+.price__description-total {
+  font-size: 20px;
+  font-family: "Roboto-Bold";
+  color: $blue;
+}
