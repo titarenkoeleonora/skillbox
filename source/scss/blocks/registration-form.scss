@@ -117,6 +117,7 @@
   text-transform: uppercase;
   background-color: $blue;
   cursor: pointer;
+  outline: none;
 
   &:focus,
   &:hover {
