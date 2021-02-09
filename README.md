@@ -1,6 +1,6 @@
 # test assigment
 
-[See project]()
+[See project](https://titarenkoeleonora.github.io/skillbox/)
 
 🛠 **Technologies used:** HTML/SCSS, JavaScript (ES6), Gulp.
 
