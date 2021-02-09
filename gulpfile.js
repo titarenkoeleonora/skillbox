@@ -12,51 +12,49 @@ let posthtml = require("gulp-posthtml");
 let include = require("posthtml-include");
 let uglify = require("gulp-uglify");
 let server = require("browser-sync").create();
+var ghPages = require("gulp-gh-pages");
 
 gulp.task("css", function () {
-  return gulp.src("source/scss/style.scss")
+  return gulp
+    .src("source/scss/style.scss")
     .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(sass())
-    .pipe(postcss([
-      autoprefixer()
-    ]))
+    .pipe(postcss([autoprefixer()]))
     .pipe(csso())
     .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("build/css"))
+    .pipe(gulp.dest("build/css"));
 });
 
 gulp.task("images", function () {
-  return gulp.src("source/img/**/*.{png,jpg,svg}")
-    .pipe(imagemin([
-      imagemin.optipng({optimizationLevel: 3}),
-      imagemin.svgo()
-    ]))
+  return gulp
+    .src("source/img/**/*.{png,jpg,svg}")
+    .pipe(
+      imagemin([imagemin.optipng({ optimizationLevel: 3 }), imagemin.svgo()])
+    )
     .pipe(gulp.dest("build/img"));
 });
 
 gulp.task("html", function () {
-  return gulp.src("source/*.html")
-    .pipe(posthtml([
-      include()
-    ]))
+  return gulp
+    .src("source/*.html")
+    .pipe(posthtml([include()]))
     .pipe(gulp.dest("build"));
 });
 
 gulp.task("js", function () {
-  return gulp.src("source/js/**/*.js")
+  return gulp
+    .src("source/js/**/*.js")
     .pipe(uglify())
     .pipe(gulp.dest("build/js"));
 });
 
 gulp.task("copy", function () {
-  return gulp.src([
-    "source/fonts/**/*.{woff,woff2}",
-    "source/*.ico"
-  ], {
-    base: "source"
-  })
+  return gulp
+    .src(["source/fonts/**/*.{woff,woff2}", "source/*.ico"], {
+      base: "source",
+    })
     .pipe(gulp.dest("build"));
 });
 
@@ -81,6 +79,10 @@ gulp.task("server", function () {
 gulp.task("refresh", function (done) {
   server.reload();
   done();
+});
+
+gulp.task("deploy", function () {
+  return gulp.src("./build/**/*").pipe(ghPages());
 });
 
 gulp.task("build", gulp.series("clean", "copy", "css", "images", "html", "js"));
