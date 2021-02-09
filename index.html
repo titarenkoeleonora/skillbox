@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Skillbox</title>
+</head>
+<body>
+  <main>
+    <h1 class="visually-hidden">Стоимость обучения и запись на курс</h1>
+    <section class="price">
+        <h2 class="price__title">Стоимость обучения</h2>
+        <div class="price__wrapper">
+          <div class="container">
+            <div class="sale price__sale-sticker">
+              <p class="sale__text">скидка <span class="sale__size">40%</span></p>
+              <p class="sale__condition">первым 20</p>
+            </div>
+            <ul class="price__options">
+              <li class="price__options-item price__options-item--full">
+                <p class="price__options-text price__options-text--full">Полная стоимость курса</p>
+                <span class="price__full-price">50&nbsp;000&#8381;</span>
+              </li>
+              <li class="price__options-item price__options-item--installment">
+                <span class="price__installment-price">2&nbsp;900&#8381;</span>
+                <p class="price__options-text price__options-text--installment">Рассрочка без первого взноса</p>
+              </li>
+              <li class="price__options-item">
+                <span class="price__first-students-price">29&nbsp;000&#8381;</span>
+                <p class="price__options-text price__options-text--first-students">Для первых 20-ти</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      <div class="price__form-wrapper">
+        <div class="container">
+          <p class="price__form-title">Запишитесь на курс</p>
+          <ul class="price__advantages">
+            <li class="price__advantages-item">Телефон</li>
+            <li class="price__advantages-item">Телефон</li>
+            <li class="price__advantages-item">Телефон</li>
+            <li class="price__advantages-item">Телефон</li>
+          </ul>
+          <div class="price__description">
+            <p class="price__description-info price__description-info--start">Старт курса: <span class="price__description-total">7 сентяря</span> </p>
+            <p class="price__description-info">Осталось: <span class="price__description-total">19 мест</span> </p>
+          </div>
+          <form class="registration-form price__form" method="post">
+            <ul class="registration-form__fields">
+              <li class="registration-form__field">
+                <input class="registration-form__text-input" type="text" data-field="name" placeholder="Имя" aria-label="Имя" pattern="^[A-Za-zА-Яа-яЁё\s]{2,}$" required="">
+              </li>
+              <li class="registration-form__field">
+                <input class="registration-form__text-input" type="tel" data-field="phone" placeholder="Телефон" aria-label="Телефон" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" required="">
+              </li>
+              <li class="registration-form__field">
+                <input class="registration-form__text-input" type="email" data-field="email" placeholder="Email" aria-label="Email" pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$" required="">
+              </li>
+            </ul>
+            <div class="registration-form__personal-info">
+              <input class="checkbox registration-form__checkbox visually-hidden" type="checkbox" id="personal-info" required="">
+              <label class="registration-form__personal-info-label" for="personal-info">Я согласен с условиями обработки&ensp;<a class="registration-form__personal-info-link" href="https://skillbox.ru/privacy_policy.pdf">персональных&nbsp;данных</a></label>
+            </div>
+            <button class="registration-form__submit" type="submit" aria-label="Записаться">Записаться</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="js/index.js"></script>
+</body>
+</html>
