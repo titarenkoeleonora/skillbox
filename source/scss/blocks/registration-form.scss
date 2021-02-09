@@ -97,6 +97,7 @@
 .registration-form__personal-info-link {
   color: $blue;
   cursor: pointer;
+  outline: none;
 
   &:focus,
   &:hover {
