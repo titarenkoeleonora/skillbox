@@ -12,7 +12,6 @@ let posthtml = require("gulp-posthtml");
 let include = require("posthtml-include");
 let uglify = require("gulp-uglify");
 let server = require("browser-sync").create();
-var ghPages = require("gulp-gh-pages");
 
 gulp.task("css", function () {
   return gulp
