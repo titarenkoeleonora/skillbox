@@ -81,9 +81,5 @@ gulp.task("refresh", function (done) {
   done();
 });
 
-gulp.task("deploy", function () {
-  return gulp.src("./build/**/*").pipe(ghPages());
-});
-
 gulp.task("build", gulp.series("clean", "copy", "css", "images", "html", "js"));
 gulp.task("start", gulp.series("build", "server"));
