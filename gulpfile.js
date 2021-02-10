@@ -31,7 +31,7 @@ gulp.task("images", function () {
   return gulp
     .src("source/img/**/*.{png,jpg,svg}")
     .pipe(
-      imagemin([imagemin.optipng({ optimizationLevel: 3 }), imagemin.svgo()])
+      imagemin([imagemin.svgo()])
     )
     .pipe(gulp.dest("build/img"));
 });
